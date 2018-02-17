@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calculator View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="breadwallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blurred_background" translatesAutoresizingMaskIntoConstraints="NO" id="6WZ-4V-p2m">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="L7x-ez-dkM">
+                                <rect key="frame" x="0.0" y="303" width="375" height="475"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vub-IC-62t">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="94.333333333333329"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtD-tp-1Sa" customClass="roundButton" customModule="breadwallet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.333333333333329" height="94.333333333333329"/>
+                                                <color key="backgroundColor" red="0.26621568202972412" green="0.7985573410987854" blue="1" alpha="0.30126284246575341" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="AC">
+                                                    <color key="titleColor" red="0.99997323206497557" green="1" blue="0.99998558637842028" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="RoundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JP2-Hp-uGH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzi-9p-RNB" customClass="roundButton" customModule="breadwallet" customModuleProvider="target">
+                                                <rect key="frame" x="94" y="0.0" width="93.333333333333314" height="94.333333333333329"/>
+                                                <color key="backgroundColor" red="0.27061688899993896" green="0.76291126012802124" blue="1" alpha="0.30131635273972601" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="+/-">
+                                                    <color key="titleColor" red="0.99997323206497557" green="1" blue="0.99998558637842028" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="RoundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ygc-EE-3QG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73e-wR-Q56" customClass="roundButton" customModule="breadwallet" customModuleProvider="target">
+                                                <rect key="frame" x="188" y="0.0" width="93" height="94.333333333333329"/>
+                                                <color key="backgroundColor" red="0.27245813608169556" green="0.72649341821670532" blue="1" alpha="0.3008615154109589" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="%">
+                                                    <color key="titleColor" red="0.99997323206497557" green="1" blue="0.99998558637842028" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="RoundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hnf-uB-hyp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jP7-pW-IbI" customClass="roundButton" customModule="breadwallet" customModuleProvider="target">
+                                                <rect key="frame" x="281.66666666666669" y="0.0" width="93.333333333333314" height="94.333333333333329"/>
+                                                <color key="backgroundColor" red="0.27019330859184265" green="0.68829977512359619" blue="1" alpha="0.29962007705479449" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="÷">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="RoundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wjz-SU-wU7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bdA-3i-p9N">
+                                        <rect key="frame" x="0.0" y="95" width="375" height="94.666666666666686"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEb-n5-4mM" customClass="roundButton" customModule="breadwallet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.333333333333329" height="94.666666666666671"/>
+                                                <color key="backgroundColor" red="0.29757154803869235" green="0.29757951362777774" blue="0.29757522442927842" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="RoundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="URU-PM-AR1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ri-5I-3fu" customClass="roundButton" customModule="breadwallet" customModuleProvider="target">
+                                                <rect key="frame" x="94" y="0.0" width="93.333333333333314" height="94.666666666666671"/>
+                                                <color key="backgroundColor" red="0.39877869129049426" green="0.39878936605833332" blue="0.39878361805932089" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="RoundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wsN-Ko-a07"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCZ-EN-6GV" customClass="roundButton" customModule="breadwallet" customModuleProvider="target">
+                                                <rect key="frame" x="188" y="0.0" width="93" height="94.666666666666671"/>
+                                                <color key="backgroundColor" red="0.49998661603248779" green="0.5" blue="0.49999279318921008" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="RoundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P8y-b4-Ha0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxe-R4-wEH" customClass="roundButton" customModule="breadwallet" customModuleProvider="target">
+                                                <rect key="frame" x="281.66666666666669" y="0.0" width="93.333333333333314" height="94.666666666666671"/>
+                                                <color key="backgroundColor" red="0.2855243980884552" green="0.65763747692108154" blue="1" alpha="0.29682148971095884" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="×">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="RoundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CoD-my-Jzw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="559-dl-ciQ">
+                                        <rect key="frame" x="0.0" y="190.33333333333331" width="375" height="94.333333333333314"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbm-Ob-qBB" customClass="roundButton" customModule="breadwallet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.333333333333329" height="94.333333333333329"/>
+                                                <color key="backgroundColor" red="0.19801909139593896" green="0.19802439209999997" blue="0.19802153785134871" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="RoundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7qw-2I-tr3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hG-Bn-yxg" customClass="roundButton" customModule="breadwallet" customModuleProvider="target">
+                                                <rect key="frame" x="94" y="0.0" width="93.333333333333314" height="94.333333333333329"/>
+                                                <color key="backgroundColor" red="0.29502170310015863" green="0.29502960043333332" blue="0.29502534798831787" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="RoundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UKg-nY-9Ue"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKO-Hk-2KW" customClass="roundButton" customModule="breadwallet" customModuleProvider="target">
+                                                <rect key="frame" x="188" y="0.0" width="93" height="94.333333333333329"/>
+                                                <color key="backgroundColor" red="0.39915845543027578" green="0.39916914036388884" blue="0.39916338689095338" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="RoundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fqz-7q-wUZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVv-dJ-N5v" customClass="roundButton" customModule="breadwallet" customModuleProvider="target">
+                                                <rect key="frame" x="281.66666666666669" y="0.0" width="93.333333333333314" height="94.333333333333329"/>
+                                                <color key="backgroundColor" red="0.88670911490550997" green="0.29899088541666663" blue="1" alpha="0.30359053938356162" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="-">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="RoundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1hY-zd-VlP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hJS-by-cDt">
+                                        <rect key="frame" x="0.0" y="285.33333333333337" width="375" height="94.666666666666686"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNH-Tb-12E" customClass="roundButton" customModule="breadwallet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.333333333333329" height="94.666666666666671"/>
+                                                <color key="backgroundColor" red="0.14940928150389157" green="0.14941328098888887" blue="0.14941112740239773" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="RoundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nyi-KM-oVi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acQ-lS-Qdk" customClass="roundButton" customModule="breadwallet" customModuleProvider="target">
+                                                <rect key="frame" x="94" y="0.0" width="93.333333333333314" height="94.666666666666671"/>
+                                                <color key="backgroundColor" red="0.19891424972542424" green="0.19891957439166663" blue="0.19891670724019658" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="RoundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TES-Py-fBj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAG-yk-FV3" customClass="roundButton" customModule="breadwallet" customModuleProvider="target">
+                                                <rect key="frame" x="188" y="0.0" width="93" height="94.666666666666671"/>
+                                                <color key="backgroundColor" red="0.30101655130671134" green="0.30102460911388884" blue="0.3010202702590869" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="RoundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T9I-az-nUB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3B-n5-Gjj" customClass="roundButton" customModule="breadwallet" customModuleProvider="target">
+                                                <rect key="frame" x="281.66666666666669" y="0.0" width="93.333333333333314" height="94.666666666666671"/>
+                                                <color key="backgroundColor" red="1" green="0.299560546875" blue="0.8810496816350869" alpha="0.29850706335616439" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="RoundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1a7-sr-82K"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Sba-Sf-aQW">
+                                        <rect key="frame" x="0.0" y="380.66666666666663" width="375" height="94.333333333333314"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="c09-XD-WXR">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.33333333333334" height="94.333333333333329"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mg-5w-wAr" customClass="roundButton" customModule="breadwallet" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187.33333333333334" height="94.333333333333329"/>
+                                                        <color key="backgroundColor" red="0.10193876403118902" green="0.10194149279444442" blue="0.10194002344834401" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <state key="normal" title="0">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="RoundButton" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l70-38-BtG"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="R4U-sb-X2o">
+                                                <rect key="frame" x="188" y="0.0" width="187" height="94.333333333333329"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqX-yg-eaN" customClass="roundButton" customModule="breadwallet" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="94.333333333333329"/>
+                                                        <color key="backgroundColor" red="0.19983653406489388" green="0.19984188341944442" blue="0.19983900297416105" alpha="0.49641481164383561" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <state key="normal" title=".">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="RoundButton" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AWX-48-YTl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VV-3R-PyB" customClass="roundButton" customModule="breadwallet" customModuleProvider="target">
+                                                        <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="94.333333333333329"/>
+                                                        <color key="backgroundColor" red="1" green="0.28137698769569397" blue="0.64640671014785767" alpha="0.30182470032739717" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <state key="normal" title="=">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="RoundButton" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F7M-AJ-sFQ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="L7x-ez-dkM" secondAttribute="height" multiplier="3:3.8" id="ytH-hp-Ulf"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmA-0p-ZyA" customClass="CopyableLabel" customModule="breadwallet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="205" width="375" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="ZBs-1Z-cSS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="90"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make a 6 character pin then press +/- button" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RgV-IX-kAX">
+                                <rect key="frame" x="0.0" y="176" width="375" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="xJ8-sT-9EV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RgV-IX-kAX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0bs-2b-CsQ"/>
+                            <constraint firstItem="DmA-0p-ZyA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Cc-ch-ncD"/>
+                            <constraint firstItem="RgV-IX-kAX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6Od-AO-ySp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L7x-ez-dkM" secondAttribute="trailing" id="Dzj-lv-gjr"/>
+                            <constraint firstItem="L7x-ez-dkM" firstAttribute="top" secondItem="DmA-0p-ZyA" secondAttribute="bottom" constant="32" id="Qpq-cc-Byg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="L7x-ez-dkM" secondAttribute="bottom" id="hcW-un-jQy"/>
+                            <constraint firstItem="DmA-0p-ZyA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nvZ-8e-3oo"/>
+                            <constraint firstItem="L7x-ez-dkM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="px8-9a-tbB"/>
+                            <constraint firstItem="DmA-0p-ZyA" firstAttribute="top" secondItem="RgV-IX-kAX" secondAttribute="bottom" constant="8" id="vcd-ie-H2g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="G3B-n5-Gjj" id="MBK-ir-JBc"/>
+                        <outlet property="clearButton" destination="wtD-tp-1Sa" id="9rT-xs-m51"/>
+                        <outlet property="divideButton" destination="jP7-pW-IbI" id="yOr-dc-ZZO"/>
+                        <outlet property="instructionLabel" destination="RgV-IX-kAX" id="PBI-Jf-reK"/>
+                        <outlet property="multiplyButton" destination="vxe-R4-wEH" id="Isq-Vd-Wxl"/>
+                        <outlet property="numbersDisplay" destination="DmA-0p-ZyA" id="j40-yl-gf7"/>
+                        <outlet property="subtractButton" destination="TVv-dJ-N5v" id="4Dk-7Y-4MC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="132.26600985221674"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blurred_background" width="1000" height="800"/>
+    </resources>
+</document>
